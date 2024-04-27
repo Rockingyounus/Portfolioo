@@ -1,26 +1,31 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import SocialLinks from "./components/SocialLinks";
 import About from "./components/About";
-import Project from "./components/Project";
-import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Skills from "./components/Skills";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import Project from "./components/Project";
+import SocialLinks from "./components/SocialLinks";
 
+import { BrowserRouter as Router } from 'react-router-dom';
 
-const App = () => {
+function App() {
   return (
-   <div>
-    <Navbar/>
-     <Home/>
-     <About/>
-     <Project/>
-     <Skills/>
-     <Contact/>
-
-     <SocialLinks/>
-   </div>
+    <div>
+      <Router>
+      <Navbar />
+      <Home />
+      <About />
+      <Skills />
+      <Project/>
+      <Contact />
+      </Router>
+      <SocialLinks />
+    </div>
   );
-};
+}
 
 export default App;
+
+
+
+

@@ -12,7 +12,7 @@ const About = () => {
                 className='text-4xl font-bold inline border-b-4 border-gray-500'>About</p>
             </div>
 
-            <p className='text-xl mt-20'>
+            <p className='text-xl mt-5'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi est autem labore, totam dolorum,
                 nam alias eius ab tempore at deleniti. Deserunt maxime similique reprehenderit,
                 iusto rem fuga perspiciatis velit.

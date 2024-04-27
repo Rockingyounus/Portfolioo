@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaLongArrowAltRight } from "react-icons/fa";
 import Portfolio from "../Asset/Portfolio.png";
-import { Link } from "react-scroll";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
     name="home"
     className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800'
     > 
-        <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-ful px-4 md:flex-row'>
+        <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-ful px-6 md:flex-row'>
             <div className='flex flex-col justify-center h-full'>
                 <h2 className='text-4xl sm:text-7xl font-bold text-white'>I'm a Full Stack Developer </h2>
                 <p className='text-gray-500 py-4 max-w-md'>
@@ -19,27 +19,30 @@ const Home = () => {
                 high-quality solutions that exceed expectations.
                 </p>
 
-                <div>
-                    <Link 
-                    to="Project"
-                    smooth duration={500}
+                <Link to="/Project"
+                
                     className=' group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r
-                    from-cyan-500 to-blue-500 '> Projects
+                    from-cyan-500 to-blue-500 '
+                    onClick={() => {
+                        // Additional functionality to execute before navigation
+                        console.log("Clicked on Projects button");
+                      }}
+                      > Projects
                         <span className='group-hover:rotate-90 duration-300'>
                         <FaLongArrowAltRight className='ml-2'/>
                         </span>
-                    </Link>
-                </div>
+                   
+                </Link>
             </div>
 
             <div>
                 <img src={Portfolio} 
                 alt="my portfolio"
-                className='mx-auto w-2/3 md:w-full'/>
+                className='mx-auto w-2/8 py-14 md:w-full'/>
             </div>
         </div>
     </div>
   )
 }
 
-export default Home
+export default Home;
